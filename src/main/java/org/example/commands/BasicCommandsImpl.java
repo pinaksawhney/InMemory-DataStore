@@ -26,7 +26,7 @@ public class BasicCommandsImpl<T, U> implements BasicCommands<T, U> {
     public int numEqualTo(U Value) {
         int count = 0;
         for (Map.Entry<T,U> entry : dataStore.entrySet()) {
-            if(entry.getValue() == Value) {
+            if(entry.getValue().equals(Value)) {
                 count++;
             }
         }

@@ -12,7 +12,7 @@ Data store server should accept the following commands:
 
 Example command sequences:
 
-INPUT OUTPUT
+#### INPUT OUTPUT
 
 
 SET ex 10 10
@@ -50,7 +50,7 @@ END
 
 Example command sequences:
 
-INPUT OUTPUT
+#### INPUT OUTPUT
 
 
 BEGIN
@@ -76,7 +76,7 @@ GET a NULL
 
 END
 
-INPUT OUTPUT
+#### INPUT OUTPUT
 
 
 BEGIN
@@ -96,7 +96,7 @@ ROLLBACK NO TRANSACTION
 END
 
 
-INPUT OUTPUT
+#### INPUT OUTPUT
 
 
 SET a 50
@@ -123,7 +123,7 @@ GET a 60
 
 END
 
-INPUT OUTPUT
+#### INPUT OUTPUT
 
 
 SET a 10

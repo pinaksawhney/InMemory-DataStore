@@ -1,6 +1,6 @@
-##REDIS-Like In-Memory Data Store
+## REDIS-Like In-Memory Data Store
 
-####Basic Commands
+#### Basic Commands
 
 Data store server should accept the following commands:
 
@@ -28,7 +28,7 @@ SET b 30
 NUMEQUALTO 10 1
 END
 
-####Transaction Commands
+#### Transaction Commands
 
 - BEGIN: Open a new transaction block. Transaction blocks can be nested; a BEGIN can be issued inside of an existing block.
 - ROLLBACK – Undo all of the commands issued in the current transaction block, and close the block. Print nothing if successful, or print NO TRANSACTION if no transaction is in progress.

@@ -30,11 +30,11 @@ public class Application<T, U> {
     private static void runCommand(Data<String, Integer> command) {
 
         if(command.getCommand().equals("SET")) {
-            basicCommands.set(command.getKey(), command.getValue());
+            basicCommands.set(command.getKey(), Integer.parseInt(String.valueOf(command.getValue())));
         }
 
         if(command.getCommand().equals("GET")) {
-            basicCommands.get(command.getKey());
+            System.out.println(basicCommands.get(command.getKey()));
         }
 
         if(command.getCommand().equals("UNSET")) {
@@ -42,7 +42,7 @@ public class Application<T, U> {
         }
 
         if(command.getCommand().equals("NUMEQUALTO")) {
-            basicCommands.numEqualTo(command.getValue());
+            System.out.println(basicCommands.numEqualTo(Integer.parseInt(String.valueOf(command.getValue()))));
         }
 
         if(command.getCommand().equals("END")) {

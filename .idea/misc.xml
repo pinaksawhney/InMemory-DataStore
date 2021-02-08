@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FindBugs-IDEA">
+    <excludeFilterFiles>
+      <filter file="$USER_HOME$/Desktop/project/ss-backend/config/findbugs-exclude.xml" enabled="true" />
+    </excludeFilterFiles>
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_14" default="false" project-jdk-name="15.0.1" project-jdk-type="JavaSDK" />
+  <component name="RMI Configuration">
+    <Server />
+    <Port>0</Port>
+    <ProjectOutput>false</ProjectOutput>
+    <CODEBASE />
+  </component>
+</project>

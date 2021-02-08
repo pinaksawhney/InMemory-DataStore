@@ -12,6 +12,7 @@ public class TransactionCommandsImpl<T, U> implements TransactionCommands<T, U> 
 
     private HashMap<T, Stack<Data<T, U>>> rollback = new HashMap<T, Stack<Data<T, U>>>();
     private Stack<Data<T, U>> transaction = new Stack<Data<T, U>>();
+    private BasicCommands<T, U> basicCommands = new BasicCommandsImpl<T, U>();
 
 
 
@@ -20,7 +21,6 @@ public class TransactionCommandsImpl<T, U> implements TransactionCommands<T, U> 
             System.out.println(NO_TRANSACTION);
             return;
         }
-        BasicCommands<T, U> basicCommands = new BasicCommandsImpl<T, U>();
         while (!transaction.peek().getCommand().equals(BEGIN)) {
             T Key = transaction.peek().getKey();
             U Value = transaction.peek().getValue();
@@ -35,7 +35,10 @@ public class TransactionCommandsImpl<T, U> implements TransactionCommands<T, U> 
     }
 
     public void transactionCommit() {
-        BasicCommands<T, U> basicCommands = new BasicCommandsImpl<T, U>();
+        if (transaction.empty()) {
+            System.out.println(NO_TRANSACTION);
+            return;
+        }
         while (!transaction.empty()) {
             if(transaction.peek().getCommand().equals(BEGIN)) {
                 transaction.pop();
@@ -46,5 +49,9 @@ public class TransactionCommandsImpl<T, U> implements TransactionCommands<T, U> 
             basicCommands.getDataStore().put(Key, Value);
             transaction.pop();
         }
+    }
+
+    public HashMap<T, Stack<Data<T, U>>> getRollback() {
+        return rollback;
     }
 }
